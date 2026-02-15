@@ -1,0 +1,1 @@
+# noita_empty_world
