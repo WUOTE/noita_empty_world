@@ -212,7 +212,7 @@ function spawn_pipes_hor() end
 function spawn_pipes_turn_left() end
 function spawn_pipes_turn_right() end
 function spawn_pipes_ver() end
-function spawn_portal() end
+-- function spawn_portal() end
 function spawn_potion_altar() end
 function spawn_potions() end
 function spawn_pressureplate() end
