@@ -1,0 +1,8 @@
+	<Mod
+		name="Empty Noita World"
+		description=""
+		tags="gameplay,quality of life"
+		dont_upload_folders="helper_script"
+		dont_upload_files="spawn_analysis.lua"
+	>
+	</Mod>
