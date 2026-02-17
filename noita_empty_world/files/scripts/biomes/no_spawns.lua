@@ -1,3 +1,12 @@
+-- function spawn_altar_top() end
+-- function spawn_endportal() end
+-- function spawn_portal() end
+-- function spawn_tele1() end
+-- function spawn_tele2() end
+-- function spawn_tele3() end
+-- function spawn_tele4() end
+-- function spawn_tele5() end
+-- function spawn_tele6() end
 function load_acidtank_left() end
 function load_acidtank_right() end
 function load_altar() end
@@ -74,7 +83,6 @@ function spawn_acid() end
 function spawn_alchemist() end
 function spawn_all_perks() end
 function spawn_all_shopitems() end
--- function spawn_altar_top() end
 function spawn_altar_torch() end
 function spawn_any_enemy() end
 function spawn_apparatus() end
@@ -133,7 +141,7 @@ function spawn_egg() end
 function spawn_electricity_trap() end
 function spawn_end_portal() end
 function spawn_endcrystal() end
-function spawn_endportal() end
+
 function spawn_essence() end
 function spawn_f_trigger() end
 function spawn_f() end
@@ -212,7 +220,6 @@ function spawn_pipes_hor() end
 function spawn_pipes_turn_left() end
 function spawn_pipes_turn_right() end
 function spawn_pipes_ver() end
--- function spawn_portal() end
 function spawn_potion_altar() end
 function spawn_potions() end
 function spawn_pressureplate() end
@@ -262,12 +269,6 @@ function spawn_swing_puzzle_box() end
 function spawn_swing_puzzle_target() end
 function spawn_table() end
 function spawn_target() end
-function spawn_tele1() end
-function spawn_tele2() end
-function spawn_tele3() end
-function spawn_tele4() end
-function spawn_tele5() end
-function spawn_tele6() end
 function spawn_teleport_back() end
 function spawn_teleport() end
 function spawn_teleporter() end
