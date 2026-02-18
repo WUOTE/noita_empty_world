@@ -77,6 +77,7 @@ function load_suspension_bridge() end
 function load_verlet_rope_with_one_joint() end
 function load_verlet_rope_with_two_joints() end
 function load_warning_strip() end
+function parallel_check() end
 function random_layout() end
 function spawn_aabb() end
 function spawn_acid() end
@@ -141,7 +142,6 @@ function spawn_egg() end
 function spawn_electricity_trap() end
 function spawn_end_portal() end
 function spawn_endcrystal() end
-
 function spawn_essence() end
 function spawn_f_trigger() end
 function spawn_f() end
