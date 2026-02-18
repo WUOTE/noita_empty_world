@@ -155,16 +155,12 @@ do local v = biomes[k]
     ModLuaFileAppend(biomepath,appendpath)
 end
 
+function OnModInit()
+    do --Make vanilla hamis nests work properly with Creature Shifts
+        local path = "data/scripts/init.lua"
+        local content = ModTextFileGetContent(path)
+        content = content:gsub("weather%.rain_type = rain_type", "weather.rain_type = RAIN_TYPE_NONE")
 
-function OnPlayerSpawned(player_entity)
-	--Gather world entity data
-    local worldEntity = GameGetWorldStateEntity()
-    local comp = EntityGetFirstComponentIncludingDisabled(worldEntity,"WorldStateComponent")
-
-    --Set weather up to be daytime, clear skies, no fog
-    ComponentSetValue2(comp,"intro_weather",true)
-    ComponentSetValue2(comp,"time",0.0)
-    ComponentSetValue2(comp,"time_dt",0.0)
-    ComponentSetValue2(comp,"fog",0)
-    ComponentSetValue2(comp,"rain",0)
+        ModTextFileSetContent(path, content)
+    end
 end
