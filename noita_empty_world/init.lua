@@ -154,3 +154,17 @@ do local v = biomes[k]
     local biomepath = table.concat({"data/scripts/biomes/", v, ".lua"})
     ModLuaFileAppend(biomepath,appendpath)
 end
+
+
+function OnPlayerSpawned(player_entity)
+	--Gather world entity data
+    local worldEntity = GameGetWorldStateEntity()
+    local comp = EntityGetFirstComponentIncludingDisabled(worldEntity,"WorldStateComponent")
+
+    --Set weather up to be daytime, clear skies, no fog
+    ComponentSetValue2(comp,"intro_weather",true)
+    ComponentSetValue2(comp,"time",0.0)
+    ComponentSetValue2(comp,"time_dt",0.0)
+    ComponentSetValue2(comp,"fog",0)
+    ComponentSetValue2(comp,"rain",0)
+end
