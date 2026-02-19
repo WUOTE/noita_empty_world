@@ -1,166 +1,81 @@
-local biomes = {
-    "alchemist_secret",
-    "boss_arena",
-    "boss_arena_top",
-    "boss_limbs_arena",
-    "boss_victoryroom",
-    "bridge",
-    "clouds",
-    "coalmine",
-    "coalmine_alt",
-    "crypt",
-    "desert",
-    "dragoncave",
-    "end_wall",
-    "endgame",
-    "endgame_end",
-    "ending_placeholder",
-    "essenceroom",
-    "essenceroom_air",
-    "essenceroom_alc",
-    "essenceroom_hell",
-    "excavationsite",
-    "excavationsite_cube_chamber",
-    "friend_1",
-    "friend_2",
-    "friend_3",
-    "friend_4",
-    "friend_5",
-    "friend_6",
-    "fungicave",
-    "fungiforest",
-    "funroom",
-    "ghost_secret",
-    "gourd_room",
-    "greed_room",
-    "gun_room",
-    "hills",
-    "laboratory",
-    "lake",
-    "lake_deep",
-    "lake_statue",
-    "lavalake",
-    "lavalake_pit",
-    "lavalake_racing",
-    "liquidcave",
-    "magic_gate",
-    "meat",
-    "meatroom",
-    "mestari_secret",
-    "moon_room",
-    "mountain/mountain",
-    "mountain/mountain_center",
-    "mountain/mountain_floating_island",
-    "mountain/mountain_hall",
-    "mountain/mountain_hall_2",
-    "mountain/mountain_hall_3",
-    "mountain/mountain_hall_4",
-    "mountain/mountain_left",
-    "mountain/mountain_left_2",
-    "mountain/mountain_left_3",
-    "mountain/mountain_left_entrance",
-    "mountain/mountain_left_stub",
-    "mountain/mountain_right",
-    "mountain/mountain_right_2",
-    "mountain/mountain_right_entrance",
-    "mountain/mountain_right_entrance_2",
-    "mountain/mountain_right_stub",
-    "mountain/mountain_top",
-    "mountain/trailer/mountain_hall",
-    "mountain_lake",
-    "mountain_tree",
-    "mystery_teleport",
-    "niilo_testroom",
-    "niilo_testroom_b",
-    "niilo_testroom_c",
-    "niilo_testroom_d",
-    "null_room",
-    "ocarina",
-    "orbrooms/orbroom_00",
-    "orbrooms/orbroom_01",
-    "orbrooms/orbroom_02",
-    "orbrooms/orbroom_03",
-    "orbrooms/orbroom_04",
-    "orbrooms/orbroom_05",
-    "orbrooms/orbroom_06",
-    "orbrooms/orbroom_07",
-    "orbrooms/orbroom_08",
-    "orbrooms/orbroom_09",
-    "orbrooms/orbroom_10",
-    "orbrooms/orbroom_11",
-    "pyramid",
-    "pyramid_entrance",
-    "pyramid_hallway",
-    "pyramid_left",
-    "pyramid_right",
-    "pyramid_top",
-    "rainforest",
-    "rainforest_dark",
-    "roadblock",
-    "robobase",
-    "roboroom",
-    "robot_egg",
-    "rock_room",
-    "sandcave",
-    "sandroom",
-    "scale",
-    "secret_altar",
-    "secret_entrance",
-    "secret_lab",
-    "shop_room",
-    "smokecave_left",
-    "smokecave_middle",
-    "smokecave_right",
-    "snowcastle",
-    "snowcastle_cavern",
-    "snowcastle_hourglass_chamber",
-    "snowcave",
-    "snowcave_petri",
-    "snowcave_secret_chamber",
-    "solid_wall_hidden_cavern",
-    "solid_wall_tower",
-    "song_room",
-    "teleroom",
-    "temple_altar",
-    "temple_altar_empty",
-    "temple_altar_left",
-    "temple_altar_left_empty",
-    "temple_altar_right",
-    "temple_altar_right_empty",
-    "temple_altar_right_snowcastle",
-    "temple_altar_right_snowcastle_empty",
-    "temple_altar_right_snowcave",
-    "temple_altar_right_snowcave_empty",
-    "temple_altar_secret",
-    "temple_wall",
-    "temple_wall_ending",
-    "the_end",
-    "tower",
-    "tower_end",
-    "town",
-    "vault",
-    "vault_entrance",
-    "vault_frozen",
-    "wandcave",
-    "watercave",
-    "winter",
-    "wizardcave",
-    "wizardcave_entrance",
-}
+local biomes = {"alchemist_secret", "boss_arena", "boss_arena_top", "boss_limbs_arena", "boss_victoryroom", "bridge",
+                "clouds", "coalmine", "coalmine_alt", "crypt", "desert", "dragoncave", "end_wall", "endgame",
+                "endgame_end", "ending_placeholder", "essenceroom", "essenceroom_air", "essenceroom_alc",
+                "essenceroom_hell", "excavationsite", "excavationsite_cube_chamber", "friend_1", "friend_2", "friend_3",
+                "friend_4", "friend_5", "friend_6", "fungicave", "fungiforest", "funroom", "ghost_secret", "gourd_room",
+                "greed_room", "gun_room", "hills", "laboratory", "lake", "lake_deep", "lake_statue", "lavalake",
+                "lavalake_pit", "lavalake_racing", "liquidcave", "magic_gate", "meat", "meatroom", "mestari_secret",
+                "moon_room", "mountain/mountain", "mountain/mountain_center", "mountain/mountain_floating_island",
+                "mountain/mountain_hall", "mountain/mountain_hall_2", "mountain/mountain_hall_3",
+                "mountain/mountain_hall_4", "mountain/mountain_left", "mountain/mountain_left_2",
+                "mountain/mountain_left_3", "mountain/mountain_left_entrance", "mountain/mountain_left_stub",
+                "mountain/mountain_right", "mountain/mountain_right_2", "mountain/mountain_right_entrance",
+                "mountain/mountain_right_entrance_2", "mountain/mountain_right_stub", "mountain/mountain_top",
+                "mountain/trailer/mountain_hall", "mountain_lake", "mountain_tree", "mystery_teleport",
+                "niilo_testroom", "niilo_testroom_b", "niilo_testroom_c", "niilo_testroom_d", "null_room", "ocarina",
+                "orbrooms/orbroom_00", "orbrooms/orbroom_01", "orbrooms/orbroom_02", "orbrooms/orbroom_03",
+                "orbrooms/orbroom_04", "orbrooms/orbroom_05", "orbrooms/orbroom_06", "orbrooms/orbroom_07",
+                "orbrooms/orbroom_08", "orbrooms/orbroom_09", "orbrooms/orbroom_10", "orbrooms/orbroom_11", "pyramid",
+                "pyramid_entrance", "pyramid_hallway", "pyramid_left", "pyramid_right", "pyramid_top", "rainforest",
+                "rainforest_dark", "roadblock", "robobase", "roboroom", "robot_egg", "rock_room", "sandcave",
+                "sandroom", "scale", "secret_altar", "secret_entrance", "secret_lab", "shop_room", "smokecave_left",
+                "smokecave_middle", "smokecave_right", "snowcastle", "snowcastle_cavern",
+                "snowcastle_hourglass_chamber", "snowcave", "snowcave_petri", "snowcave_secret_chamber",
+                "solid_wall_hidden_cavern", "solid_wall_tower", "song_room", "teleroom", "temple_altar",
+                "temple_altar_empty", "temple_altar_left", "temple_altar_left_empty", "temple_altar_right",
+                "temple_altar_right_empty", "temple_altar_right_snowcastle", "temple_altar_right_snowcastle_empty",
+                "temple_altar_right_snowcave", "temple_altar_right_snowcave_empty", "temple_altar_secret",
+                "temple_wall", "temple_wall_ending", "the_end", "tower", "tower_end", "town", "vault", "vault_entrance",
+                "vault_frozen", "wandcave", "watercave", "winter", "wizardcave", "wizardcave_entrance"}
 
-for k=1,#biomes
-do local v = biomes[k]
+for k = 1, #biomes do
+    local v = biomes[k]
     local appendpath = "mods/noita_empty_world/files/scripts/biomes/no_spawns.lua"
     local biomepath = table.concat({"data/scripts/biomes/", v, ".lua"})
-    ModLuaFileAppend(biomepath,appendpath)
+    ModLuaFileAppend(biomepath, appendpath)
+end
+
+do -- Vanilla Pixel Scene adjustments
+    local path = "data/biome/_pixel_scenes.xml"
+    local content = ModTextFileGetContent(path)
+
+    content = content:gsub("data/entities/props/music_machines/music_machine_00.xml", "")
+    content = content:gsub("data/entities/props/music_machines/music_machine_01.xml", "")
+    content = content:gsub("data/entities/props/music_machines/music_machine_02.xml", "")
+    content = content:gsub("data/entities/props/music_machines/music_machine_03.xml", "")
+    content = content:gsub("data/entities/items/pickup/evil_eye.xml", "")
+    content = content:gsub("data/biome_impl/tower_start.png", "")
+    --   content = content:gsub("", "")
+
+    ModTextFileSetContent(path, content)
+end
+
+do -- Vanilla Pixel Scene adjustments
+    local path = "data/biome/_biomes_all.xml"
+    local content = ModTextFileGetContent(path)
+
+    content = content:gsub("data/biome/tower/solid_wall_tower.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_1.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_2.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_3.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_4.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_5.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_6.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_7.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_8.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_9.xml", "")
+    content = content:gsub("data/biome/tower/solid_wall_tower_10.xml", "")
+
+    ModTextFileSetContent(path, content)
 end
 
 function OnModInit()
-    do --Make vanilla hamis nests work properly with Creature Shifts
+    do -- Make vanilla hamis nests work properly with Creature Shifts
         local path = "data/scripts/init.lua"
         local content = ModTextFileGetContent(path)
-        content = content:gsub("weather%.rain_type = rain_type", "weather.rain_type = RAIN_TYPE_NONE")
+        content = content:gsub("OnWorldPreUpdate", "_%1")
 
         ModTextFileSetContent(path, content)
     end
 end
+

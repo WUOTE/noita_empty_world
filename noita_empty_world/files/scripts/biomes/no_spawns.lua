@@ -1,5 +1,6 @@
 -- function spawn_altar_top() end
 -- function spawn_endportal() end
+-- function spawn_essence(x, y) EntityLoad( "data/entities/buildings/mystery_teleport_back.xml", x, y - 200 ) end
 -- function spawn_portal() end
 -- function spawn_tele1() end
 -- function spawn_tele2() end
@@ -7,6 +8,8 @@
 -- function spawn_tele4() end
 -- function spawn_tele5() end
 -- function spawn_tele6() end
+-- function spawn_teleport_back() end
+-- function spawn_teleporter() end
 function load_acidtank_left() end
 function load_acidtank_right() end
 function load_altar() end
@@ -269,9 +272,7 @@ function spawn_swing_puzzle_box() end
 function spawn_swing_puzzle_target() end
 function spawn_table() end
 function spawn_target() end
-function spawn_teleport_back() end
 function spawn_teleport() end
-function spawn_teleporter() end
 function spawn_tower_short() end
 function spawn_tower_tall() end
 function spawn_trapwand() end
