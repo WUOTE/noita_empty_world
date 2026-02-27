@@ -54,7 +54,10 @@ do -- Vanilla Pixel Scene adjustments
     local path = "data/biome/_biomes_all.xml"
     local content = ModTextFileGetContent(path)
 
-    content = content:gsub("data/biome/tower/solid_wall_tower.xml", "")
+    -- Stop if we dont load the tower wall cursed rock no longer spawns in the world
+    -- content = content:gsub("data/biome/tower/solid_wall_tower.xml", "")
+
+    content = content:gsub("data/biome/tower/solid_wall_tower_1.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_1.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_2.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_3.xml", "")
@@ -65,6 +68,9 @@ do -- Vanilla Pixel Scene adjustments
     content = content:gsub("data/biome/tower/solid_wall_tower_8.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_9.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_10.xml", "")
+
+    -- Prevent essence eater from spawning in the world
+    content = content:gsub("data/entities/buildings/essence_eater.xml", "")
 
     ModTextFileSetContent(path, content)
 end
@@ -78,4 +84,3 @@ function OnModInit()
         ModTextFileSetContent(path, content)
     end
 end
-
