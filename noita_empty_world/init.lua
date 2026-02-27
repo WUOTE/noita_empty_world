@@ -36,6 +36,7 @@ for k = 1, #biomes do
 end
 
 do -- Vanilla Pixel Scene adjustments
+    --   content = content:gsub("", "")
     local path = "data/biome/_pixel_scenes.xml"
     local content = ModTextFileGetContent(path)
 
@@ -45,7 +46,9 @@ do -- Vanilla Pixel Scene adjustments
     content = content:gsub("data/entities/props/music_machines/music_machine_03.xml", "")
     content = content:gsub("data/entities/items/pickup/evil_eye.xml", "")
     content = content:gsub("data/biome_impl/tower_start.png", "")
-    --   content = content:gsub("", "")
+
+    -- Prevent essence eater from spawning in the world
+    content = content:gsub("data/entities/buildings/essence_eater.xml", "")
 
     ModTextFileSetContent(path, content)
 end
@@ -68,6 +71,12 @@ do -- Vanilla Pixel Scene adjustments
     content = content:gsub("data/biome/tower/solid_wall_tower_8.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_9.xml", "")
     content = content:gsub("data/biome/tower/solid_wall_tower_10.xml", "")
+
+    ModTextFileSetContent(path, content)
+end
+do
+    local path = "data/entities/buildings/essence_eater.xml"
+    local content = ModTextFileGetContent(path)
 
     -- Prevent essence eater from spawning in the world
     content = content:gsub("data/entities/buildings/essence_eater.xml", "")
