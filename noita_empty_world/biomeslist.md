@@ -1,10 +1,8 @@
-# noita_empty_world
-
-## Removed Biomes List
+# Removed Biomes List
 
 Replacement Color (Black/Bg): `#000000`
 
-### Regular Game
+## Regular Game
 
 | Color (Hex) |
 | ----------- |
@@ -35,7 +33,7 @@ Replacement Color (Black/Bg): `#000000`
 | `#e861f0`   |
 | `#f0d517`   |
 
-### New Game Plus
+## New Game Plus
 
 | Color (Hex) |
 | ----------- |
@@ -65,7 +63,7 @@ Replacement Color (Black/Bg): `#000000`
 | `#e861f0`   |
 | `#f0d517`   |
 
-### Nightmare
+## Nightmare
 
 | Color (Hex) |
 | ----------- |
